@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
+  <link href="./static/assets/favicon.ico" rel="icon">
+
+  <title>My portfolio</title>
+
+<link href="./static/main.3f6952e4.css" rel="stylesheet"></head>
+
+<body class="">
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+<!-- Add your content of header -->
+<header>
+  <nav class="navbar  navbar-fixed-top navbar-default">
+    <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav ">
+          <li><a href="./index.html" title="">01 : Home</a></li>
+          <li><a href="./works.html" title="">02 : Works</a></li>
+          <li><a href="./about.html" title="">03 : About me</a></li>
+          <li><a href="./contact.html" title="">04 : Contact</a></li>
+        </ul>
+
+
+          <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
+            <li><a href="./index.html" title="" class="active">001</a></li>
+            <li><a href="./index.html" title="">002</a></li>
+            <li><a href="./index.html" title="">003</a></li>
+            <li><a href="./index.html" title="">004</a></li>
+            <li><a href="./index.html" title="">005</a></li>
+            <li><a href="./index.html" title="">006</a></li>
+          </ul>
+
+
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="section-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-20">
+        <img src="./static/assets/images/work1.jpg" class="img-responsive" alt="">
+        <div class="card-container">
+          <div class="text-center">
+            <h1 class="h2">001 : Sending e-mails</h1>
+          </div>
+          <p>Here, I would like to present my program written in Python</p>
+
+          <blockquote>
+            <p>The program is used as a remainder or a tool for repeating things that we want to learn</p>
+            <small class="pull-right">Oskar Unikowski</small>
+          </blockquote>
+        </div>
+      </div>
+
+
+
+      <div class="col-md-8 col-md-offset-2 section-container-spacer">
+        <div class="row">
+          <div class="col-xs-20 col-md-20">
+
+      <div class="col-xs-12">
+          <h3>First of all, let's import the necessary libraries</h3>
+        <img src="./static/assets/images/libs.png" class="img-responsive" alt="">
+          <h3>
+              Now, let's take a look at the code. The important thing is that, if we want to use this code,
+              we need to type the emails (our and person's we want to send it to), in the same line as the python command
+              e.g. python3 email_send.py our@email.com someones@email.com
+          </h3>
+          <img src="./static/assets/images/emails.png" class="img-responsive" alt="">
+          <h3>
+              The next step that I have decided to do in this project is some sort of automation.
+              As you can see the code is trying to detect to which service our email belongs.
+              If it is on Gmail, Hotmail or yahoo. If the program cannot detect it, it will ask us for type it in manually.
+              <br>If you want to read more about smtp click <a href="https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol" target="_blank">here</a>
+
+          </h3>
+          <img src="./static/assets/images/smtp.png" class="img-responsive" alt="">
+          <h3>
+              After we inserted our mail, we need to type in our password. Don't worry! The password will not show up.
+          </h3>
+          <img src="./static/assets/images/password.png" class="img-responsive" alt="">
+          <h3>
+              In the next line of code why decide at what time we want our mail to be sent/to be received.
+          </h3>
+          <img src="./static/assets/images/at_time.png" class="img-responsive" alt="">
+          <h3>
+              At this point, our loop starts. As we can see the loop equals True.
+              In Python, this way, we create an infinite loop.
+              The first thing that our loop will do is choosing semi-random number.
+              Why? You will get to know further in this article.
+              After that the program assigns to variable "now" part of datetime library - "now" (we imported the whole library previously).
+              Then, again, the program assigns the value of "now" to "current_time" in the following format: HH/MM/SS.
+
+          </h3>
+          <img src="./static/assets/images/loop_start.png" class="img-responsive" alt="">
+          <h3>
+              Now, if the current time that has been assigned above equals to the time that we have set before,
+              we create variable "email" that equivalents to "EmailMessage" that we have imported from "email.message"
+              and the program fills up our email's details.
+              In line 45, we create "random_image", it is our variable for the content of our email.
+              "random-image" is a semi-random text file (from 1 to 7) that should be in the same folder as our python program.
+              In each of these text files, please write some notes or something that you want to receive.
+          </h3>
+          <img src="./static/assets/images/email_details.png" class="img-responsive" alt="">
+          <h3>
+              The last part of the code is responsible for the actual connection to our email's distribution.
+              <br>First, we send "hello" ("ehlo") message to enable more options and to see which extensions are supported by the server. Read more about hello message
+              <a href="https://help.returnpath.com/hc/en-us/articles/220223328-What-is-Extended-HELO-EHLO-" target="_blank">here</a>
+              <br>Then we start TLS (click <a href="https://www.cloudflare.com/learning/ssl/transport-layer-security-tls/" target="_blank">here</a> to learn more about Transport Layer Security)
+              <br>After it is done, we can safely login to our email and send the message.
+              <br>You may also ask about "try" and "except" that you already have seen in this code. It is here in case if something went wrong. There are hints what may cause the problem that has occurred
+          </h3>
+          <img src="./static/assets/images/end.png" class="img-responsive" alt="">
+          <p>You can download this code from my GitHub <a href="https://github.com/OskarUnikowski/email_send", target="_blank">here</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer-container text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>© UNTITLED | Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+</script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-XXXXX-X', 'auto');
+  ga('send', 'pageview');
+</script>
+
+--> <script type="text/javascript" src="./static/main.70a66962.js"></script></body>
+
+</html>
